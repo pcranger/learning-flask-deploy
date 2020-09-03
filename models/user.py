@@ -1,7 +1,4 @@
-import sqlite3
 from db import db
-
-# this is an api
 
 
 class UserModel(db.Model):
@@ -21,7 +18,7 @@ class UserModel(db.Model):
 
     @classmethod
     def find_by_username(cls, username):
-        return cls.query.filter_by(username=username).first()  # SELECT *
+        return cls.query.filter_by(username=username).first()
 
     @classmethod
     def find_by_id(cls, _id):
